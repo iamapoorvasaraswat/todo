@@ -1,0 +1,26 @@
+<template>
+    <div class="center">
+        <img src="https://img.favpng.com/23/21/12/bolt-lightning-clip-art-png-favpng-mJAd1gLyYyVNVZJYnRbEZe2NQ_t.jpg" />
+    </div>
+    <div class="toDo">
+       
+        <div class="header">
+            <h2>My To Do List</h2>
+            <input 
+                type="text"  
+                placeholder="Type Here..."
+                onchange={handleToDoChanges} 
+            >
+            <span  class="addBtn"  onclick={handleToDo}>Add</span>
+        </div>
+       
+         <ul>
+            <template for:each={todos} for:item="todo">
+                <li key={todo.id}>
+                    {todo.taskDetails}
+                </li>
+            </template>
+        </ul>     
+    </div>
+   
+</template>
